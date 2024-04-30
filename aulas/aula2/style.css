@@ -1,0 +1,16 @@
+#titulo{
+    color: #5EC8AE;
+
+}
+
+#texto{
+    border: 5px solid #5EC8AE;
+    padding: 5px;
+}
+
+#autor{
+    color: #5EC8AE;
+    border: 5px solid #000;
+    border-radius: 50px;
+    padding: 5px;
+}
