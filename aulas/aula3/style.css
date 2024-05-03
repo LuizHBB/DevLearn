@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    align-content: center;
+}
+
+p{
+    border: 5px solid #5EC8AE;
+}
+
+.poema{
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+}
+
+#titulo{
+    color: #5EC8AE;
+}
+
+#autor{
+    justify-content: center;
+    color: #5EC8AE;
+    border: 5px solid #000;
+    border-radius: 25px;
+    width: 400px;
+    height: auto;
+
+    margin-left: 35%;
+}
