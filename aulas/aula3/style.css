@@ -32,12 +32,41 @@ ol{
     list-style-type: disc; /*deixa a bolinha da lista preenchida*/
 }
 
+.content{
+    display: flex;
+    flex-direction: row; /*elementos do conteudo em linha*/
+    align-items: center;
+}
+
 #titulo-ex1{
     color: #5EC8AE;
 }
 
 #titulo-ex2{
     color: #fff;
+}
+
+#titulo-ex3{
+    background-color: #FAECD4; /*background com essa cor*/
+    padding: 33px; /*padding para que a cor ocupe um espaço maior em volta do texto*/
+    margin: 0px; /*sem borda, para que a cor chegue até o elemento abaixo da imagem*/
+    text-align:center; /*centraliza  horizontalmente*/
+}
+
+#image{
+    border: 3px dashed black; /*borda cortada preta e com 4 pixeis*/
+    padding: 5px; /*padding para que tenha espaço entre a imagem e a borda*/
+    width:auto;
+    height:400px;
+    margin:20px; 
+}
+
+#text-ex3{
+    border: 4px solid #FAECD4; /*borda sólida com essa cor*/
+    padding: 5px; /*padding para que o texto não encoste na borda*/
+    height:fit-content;
+    width:fit-content; /*altura e largura do tamanho do conteudo*/
+    text-align: center; /*alinha o texto no centro horizotalmente*/
 }
 
 #autor{
