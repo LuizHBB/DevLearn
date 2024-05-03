@@ -1,10 +1,14 @@
 body{
-    text-align: center;
-    align-content: center;
+    /*text-align: center;
+    /* align-content: center; */
 }
 
 p{
     border: 5px solid #5EC8AE;
+}
+
+ol{
+    list-style-position: inside;
 }
 
 .poema{
@@ -14,8 +18,26 @@ p{
     display: flex;
 }
 
-#titulo{
+.listas{
+    background-color: white;
+    border: 5px solid purple;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 100px;
+}
+
+.li-purple{
+    color: purple;
+    list-style-type: disc; /*deixa a bolinha da lista preenchida*/
+}
+
+#titulo-ex1{
     color: #5EC8AE;
+}
+
+#titulo-ex2{
+    color: #fff;
 }
 
 #autor{

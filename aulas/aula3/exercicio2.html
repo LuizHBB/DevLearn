@@ -3,30 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Exercicio 2</title>
 </head>
-<body>
-    <h1>Lista de Afazeres</h1>
+<body style="background-color: #5EC8AE">
+    <h1 id="titulo-ex2">Lista de Afazeres</h1>
 
     <ol>
-        <li>Segunda-feira
-            <ul>
-                <li>Terminar o projeto</li>
-                <li>Pular Corda</li>
-            </ul>
-        </li>
-        <li>Terça-feira
-            <ul>
-                <li>Ir no supermercado</li>
-                <li>Dev.learn() S3</li>
-            </ul>
-        </li>
-        <li>Quarta-feira
-            <ul>
-                <li>Ir na Aula</li>
-                <li>Dev.boost()</li>
-            </ul>
-        </li>
-    </ol>
+        <div class="listas">
+            <li>Segunda-feira
+                <ul>
+                    <div class="list-conjunto">
+                        <li>Terminar o projeto</li>
+                        <li class="li-purple">Pular Corda</li>
+                    </div>
+                </ul>
+            </li>
+            <li>Terça-feira
+                <div class="list-conjunto">
+                    <ul>
+                        <li>Ir no supermercado</li>
+                        <li class="li-purple">Dev.learn() S3</li>
+                    </ul>
+                </div>
+            </li>
+            <li>Quarta-feira
+                <div class="list-conjunto">
+                    <ul>
+                        <li>Ir na Aula</li>
+                        <li class="li-purple">Dev.boost()</li>
+                    </ul>
+                </div>
+            </li>
+        </div>
+    </ol>       
 </body>
 </html>
