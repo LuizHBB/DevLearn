@@ -1,0 +1,29 @@
+/*EXECICIO 1*/
+.grid-ex1{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-content: center;
+}
+
+.corpo-poema{
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+
+.poema{
+    border: 5px solid #5EC8AE;
+}
+
+#titulo-ex1{
+    text-align: center;
+    color: #5EC8AE;
+}
+
+#autor-ex1{
+    text-align: center;
+    align-content: center;
+    color: #5EC8AE;
+    border: 5px solid #000;
+    border-radius: 25px;
+}
