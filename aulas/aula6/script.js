@@ -48,3 +48,18 @@ function operadores(event){
     resposta.textContent = resultado;
 
 }
+
+function contador(event){
+    let valor = parseInt(document.getElementById('value').textContent);
+    const contador = event.target.textContent
+    if(contador === '+'){
+        valor++;
+    
+    }else if(contador === '-'){
+        valor--;
+        
+    }
+    document.getElementById('value').textContent = valor;
+
+
+}
