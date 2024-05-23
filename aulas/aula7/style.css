@@ -1,5 +1,6 @@
-.container-ex1{
+.container-ex1, .container-ex2{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+

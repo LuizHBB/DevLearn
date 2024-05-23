@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <div class="container-ex2" onsubmit="return trocaCor()">
+        <h2>Trocando a cor do HTML</h2>
+        <form id="form-ex2">
+            <label for="inputColor">Escolha uma cor:</label>
+            <input type="text" id="cor" name="cor">
+            <input type="submit" value="Enviar">
+        </form>
+        <p>O texto do html foi alterado para a cor: <span id="changeColor">cor</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
