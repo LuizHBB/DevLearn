@@ -24,4 +24,18 @@ function trocaCor(){
 
     return false; // Prevenir o comportamento padrão do formulário
 }
-trocaCor();
+
+let count = 0;
+function collectData(){
+    const jsNome = document.getElementById('nome').value;
+    const jsIdade = document.getElementById('idade').value;
+    const jsPeso = document.getElementById('peso').value;
+    count++;
+
+    const data = [jsNome, jsIdade, jsPeso];
+
+    const dataOutput = document.getElementById('outputData');
+    dataOutput.innerHTML = `<p>Nome: ${data[0]}</p><p>Idade: ${data[1]}</p><p>Peso: ${data[2]}</p>`;
+    
+    return false;
+}

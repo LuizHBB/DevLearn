@@ -1,6 +1,20 @@
-.container-ex1, .container-ex2{
+.container-ex1, .container-ex2, .container-ex3{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.data-content{
+    border: 3px dashed black;
+    padding: 10px;
+}
+
+#forms-ex3{
+    display: flex;
+    flex-direction: column;
+}
+
+#outputData{
+    border: 3px solid gray;
 }
 
