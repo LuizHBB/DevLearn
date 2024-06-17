@@ -25,17 +25,71 @@ function trocaCor(){
     return false; // Prevenir o comportamento padrão do formulário
 }
 
-let count = 0;
-function collectData(){
-    const jsNome = document.getElementById('nome').value;
-    const jsIdade = document.getElementById('idade').value;
-    const jsPeso = document.getElementById('peso').value;
-    count++;
+let collectedData = [];
+let collectedDataAge = [];
+let collectedDataPeso = [];
 
-    const data = [jsNome, jsIdade, jsPeso];
+function collectData() {
+    // Obtenha os valores dos campos do formulário
+    const nome = document.getElementById('nome').value;
+    const idade = document.getElementById('idade').value;
+    const peso = document.getElementById('peso').value;
 
-    const dataOutput = document.getElementById('outputData');
-    dataOutput.innerHTML = `<p>Nome: ${data[0]}</p><p>Idade: ${data[1]}</p><p>Peso: ${data[2]}</p>`;
+    // Verifique se os campos estão preenchidos
+    if (!nome || !idade || !peso) {
+        alert('Por favor, preencha todos os campos.');
+        return false; // Impede o envio do formulário
+    }
+
+    // Crie um objeto com os dados coletados
+    const formData = {
+        nome: nome,
+        idade: idade,
+        peso: peso
+    };
+
+    // Adicione o objeto ao array
+    if(idade > 35){
+        collectedDataAge.push(formData);
+    }else if(peso < 60){
+        collectedDataPeso.push(formData);
+    }
+    collectedData.push(formData);
+
+    const outputSelectAge = document.getElementById('outputSelectAge');
+    outputSelectAge.innerHTML = '<div class="dataOutput"><h3>Dados Coletados:</h3>';
+    collectedDataAge.forEach((data, index) => {
+        outputSelectAge.innerHTML += `<p><strong>Entrada ${index + 1}</strong></p>`;
+        outputSelectAge.innerHTML += `<p>Nome: ${data.nome}</p>`;
+        outputSelectAge.innerHTML += `<p>Idade: ${data.idade}</p>`;
+        outputSelectAge.innerHTML += `<p>Peso: ${data.peso}</p>`;
+        outputSelectAge.innerHTML += `<p>----------------------------------</p></div>`;
+    });
+
+
+    const outputSelectPeso = document.getElementById('outputSelectPeso');
+    outputSelectPeso.innerHTML = '<div class="dataOutput"><h3>Dados Coletados:</h3>';
+    collectedDataPeso.forEach((data, index) => {
+        outputSelectPeso.innerHTML += `<p><strong>Entrada ${index + 1}</strong></p>`;
+        outputSelectPeso.innerHTML += `<p>Nome: ${data.nome}</p>`;
+        outputSelectPeso.innerHTML += `<p>Idade: ${data.idade}</p>`;
+        outputSelectPeso.innerHTML += `<p>Peso: ${data.peso}</p>`;
+        outputSelectPeso.innerHTML += `<p>----------------------------------</p></div>`;
+    });
+
+    // Atualize a exibição dos dados no HTML
+    const outputDiv = document.getElementById('outputData');
+    outputDiv.innerHTML = '<div class="dataOutput"><h3>Dados Coletados:</h3>';
+    collectedData.forEach((data, index) => {
+        outputDiv.innerHTML += `<p><strong>Entrada ${index + 1}</strong></p>`;
+        outputDiv.innerHTML += `<p>Nome: ${data.nome}</p>`;
+        outputDiv.innerHTML += `<p>Idade: ${data.idade}</p>`;
+        outputDiv.innerHTML += `<p>Peso: ${data.peso}</p>`;
+        outputDiv.innerHTML += `<p>----------------------------------</p></div>`;
+    });
+
     
+
+    // Impede o envio do formulário
     return false;
 }
